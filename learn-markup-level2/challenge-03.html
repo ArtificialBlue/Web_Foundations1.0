@@ -10,6 +10,7 @@
         <label>
           Search
           <!-- Create an input with type with value "text" -->
+          <input type="text" id="giphy-search">
           
         </label>
       </p>
@@ -25,8 +26,16 @@
         <!-- Wrap each radio button in a label and include the label text -->
         <!-- Here is the first input you make the others -->
         <label>
-          <input type="radio" name="size" value="fixed_height">
+          <input name="size" value="fixed_height" type="radio">
           Fixed Height
+        </label>
+        <label>
+          <input name="size" value="fixed_height_small" type="radio">
+          Fixed Height Small
+        </label>
+        <label>
+          <input name="size" value="fixed_height_small_still" type="radio">
+          Fixed Height Small Still
         </label>
       </p>
 
@@ -34,16 +43,28 @@
         <!-- Create an input inside a label. -->
         <!-- This will be a checkbox. Use type = cheackbox -->
         <!-- Checkbox id='cats-only'-->
+        <label>
+          <input id="cats-only" type="checkbox">
+          Cats Only
+        </label>
       </p>
 
       <p>
         <!-- Make an other check box -->
         <!-- Use id='show-title'-->
+        <label>
+          <input id="show-title" type="checkbox">
+          Show Title
+        </label>
       </p>
 
       <p>
         <!-- Make a range slider. This is inptu with type = range -->
         <!-- range id="image-count"-->
+        <label>
+          <input id="image-count" type="range" min="0" max="10">
+          Image Count
+        </label>
       </p>
       
       <p>

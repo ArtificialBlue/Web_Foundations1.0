@@ -10,21 +10,24 @@
         <label>
           Enter Number
           <!-- Give this input the id="swapi-id" and type="number"-->
-          <input >
+          <input id="swapi-id" type="number">
         </label>
       </p>
 
       <p>
         <select id="swapi-category">
           <!-- Create option with value="people" -->
+          <option value="people">People</option>
           <!-- Create option with value="planets" -->
+          <option value="planets">Planets</option>
           <!-- Create option with value="starships" -->
+          <option value="starships">Starships</option>
         </select>
       </p>
       
       <p>
         <!-- Give this button type and value of submit -->
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </p>
     </form>
 
@@ -34,7 +37,7 @@
     </div>
 
     <script>
-      // No need to edit below this point
+       // No need to edit below this point
       // Get reference to DOM elements 
       const form = document.getElementById('form')
       const results = document.getElementById('results')
@@ -53,7 +56,7 @@
       function fetchData(category = 'people', value = 1) {
         category = category ? category : 'people'
         value = value ? value : 1
-        const path = `https://swapi.co/api/${category}/${value}`
+        const path = `https://swapi.dev/api/${category}/${value}`
         console.log(path)
         fetch(path)
         .then(res => res.json())
