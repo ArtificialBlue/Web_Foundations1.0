@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(205, 242, 253);
+}
+
+#facePortrait {
+    border-radius: 50%;
+    border: 6px dotted rgb(42, 158, 204);
+    width: 130px;
+    display: inline-block;
+}
+
+header {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(76, 100, 167);
+}
+.Links {
+    text-align: center;
+
+}
+.about-me {
+    text-align: center;
+    line-height: 30px;
+    padding: 0 40px;
+}
+.skills{
+    text-align: center;
+    line-height: 30px;
+}
+ul {
+    list-style: none;
+}
+footer {
+    position: absolute;
+    bottom: 5px;
+}
