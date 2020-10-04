@@ -36,3 +36,23 @@ for (let i=0; i<data.length; ++i) {
 
     itemsContainer.appendChild(newDiv)
 }
+
+const cart = []
+
+function addItem(name,price){
+    const item = {name:name, price: price, qty: 1 }
+    cart.push(item)
+}
+
+function showItems(){
+//Template Strings have to have grave accent characters: `` and not single quotes ''
+    console.log(`You have ${cart.length} items in your cart`)
+}
+
+addItem("Apple",0.99)
+addItem("Orange",2.50)
+addItem("Banana",5.00)
+
+
+showItems()
+
