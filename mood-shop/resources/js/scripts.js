@@ -39,6 +39,7 @@ for (let i=0; i<data.length; ++i) {
 
 const cart = []
 
+//Add Item to Cart
 function addItem(name,price){
 
     for (let i = 0; i < cart.length; i += 1){
@@ -48,12 +49,10 @@ function addItem(name,price){
         }
     }
 
-
-
     const item = {name, price, qty: 1 }
     cart.push(item)
 }
-
+//Show Items in Cart
 function showItems(){
 //Template Strings have to have grave accent characters: `` and not single quotes ''
     const qty = getQty()
@@ -72,7 +71,8 @@ function showItems(){
         }
         return qty
     }
-
+}
+//Get Total in Cart
     function getTotal(){
         let total = 0
         for(let i = 0; i < cart.length; i += 1){
@@ -80,12 +80,26 @@ function showItems(){
         }
         return total
     }
-}
+
+    function removeItem(name, qty = 0){
+        for(let i = 0; i < cart.length; i += 1){
+            if (cart[i].name === name){
+                if (qty > 0){
+                    cart[i].qty -= qty
+                }
+                if (cart[i].qty < 1 || qty === 0){
+                    cart.splice(i,1)
+                }
+                return
+            }
+        } 
+    }
 
 addItem("Apple",0.99)
 addItem("Orange",2.50)
 addItem("Banana",5.00)
 addItem("Apple",0.99)
+removeItem("Apple",1)
 
 showItems()
 
