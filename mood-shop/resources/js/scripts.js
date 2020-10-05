@@ -111,5 +111,9 @@ addItem("Apple",0.99)
 //removeItem("Apple",1)
 
 showItems()
-console.log(itemList)
-
+const all_items_button =  Array.from(document.querySelectorAll("button"))
+all_items_button.forEach(elt => elt.addEventListener('click', () => {
+    addItem(elt.getAttribute('id'), elt.getAttribute('data-price'))
+    showItems()
+}))
+console.log(all_items_button)
