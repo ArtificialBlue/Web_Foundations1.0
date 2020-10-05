@@ -1,5 +1,9 @@
 import data from './data.js'
 
+const itemList = document.getElementById('item-list')
+itemList.innerHTML = '<li> Hello World</li>'
+const cartQty = document.getElementById('cart-qty')
+const cartTotal = document.getElementById('cart-total')
 const itemsContainer = document.getElementById('items')
 
 for (let i=0; i<data.length; ++i) {
@@ -56,14 +60,19 @@ function addItem(name,price){
 function showItems(){
 //Template Strings have to have grave accent characters: `` and not single quotes ''
     const qty = getQty()
-    console.log(`You have ${qty} items in your cart`)
+    cartQty.innerHTML = `You have ${qty} items in your cart`
+
+
+    let itemStr = ''
+
     for(let i = 0; i < cart.length; i += 1){
-        console.log(`- ${cart[i].name } $${cart[i].price} x ${cart[i].qty} `)
+        const {name, price, qty} = cart[i]
 
+        itemStr += `<li>${name} $${price} x ${qty} = ${qty * price} </li>`
     }
+    itemList.innerHTML = itemStr
     const total = getTotal()
-    console.log(`Total in cart: $${total.toFixed(2)}`)
-
+    cartTotal.innerHTML = `Total in cart: $${total.toFixed(2)}`
     function getQty() {
         let qty = 0
         for (let i = 0; i < cart.length; i += 1){
@@ -99,7 +108,8 @@ addItem("Apple",0.99)
 addItem("Orange",2.50)
 addItem("Banana",5.00)
 addItem("Apple",0.99)
-removeItem("Apple",1)
+//removeItem("Apple",1)
 
 showItems()
+console.log(itemList)
 
