@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resistor Color Code Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <div class="resistorVisual">
+        <div class= "cable"></div>
+        <div class= "resistorBody"></div>
+        <div class= "firstBand"></div>
+        <div class= "secondBand"></div>
+        <div class= "thirdBand"></div>
+        <div class= "fourthBand"></div>
+    </div>
+    <div class="selectionDisplay">
+        <label for="bandNumber">Select Band</label>
+        <!--<input class="Band" type="number"> -->
+        <select name="Band" id="bandNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+
+        <label for="selectColor">Select Color</label>
+        <!--<input class="Color" type="number"> -->
+        <select name="Color" id="selectColor">
+            <option value="Black">Black</option>
+            <option value="Brown">Brown</option>
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+            <option value="Violet">Violet</option>
+            <option value="Gray">Gray</option>
+            <option value="White">White</option>
+            <option value="Gold">Gold</option>
+            <option value="Silver">Silver</option>
+        </select>
+
+        <label for="Voltage">Input Voltage</label>
+        <input id="Voltage" type="number">
+
+        <p id="displayResistance">Resistance:</p>
+        <p id="displayTolerance">Tolerance Range:</p>
+        <p id="displayCurrent">Current:</p>
+    </div>
+
+
+    </body>
+    <script src='scripts.js'></script>
+    </html>
