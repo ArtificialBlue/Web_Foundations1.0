@@ -2,13 +2,37 @@
 <html>
     <head>
         <title>Tip Calculator</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <input class="bill" id="input-bill" type="number">
-        <input class="tip" id="input-tip" type="number">
-        <input class="peopleNumber" id="input-people" type="number">
-        <p class="displayTip" id="display-tip"></p>
-        <p class="displayTotal" id="display-total"></p>
+        <div class="calculator-form">
+            <div class="inputs">
+
+                <label for="input-bill">Bill</label>
+                <input class="bill" id="input-bill" type="number">
+
+                
+                
+                <label for="input-tip">Tip %</label>
+                <div>
+                <input class="tip" id="input-tip" type="number">
+                </div>
+
+                
+                <label for="input-people">Number of People</label>
+                <div>
+                <input class="peopleNumber" id="input-people" type="number">
+                </div>
+            </div>
+
+            <div class="display">
+                <label for="display-tip">Tip Amount</label>
+                <p class="displayTip" id="display-tip"></p>
+                <label for="display-total">Total Amount</label>
+                <p class="displayTotal" id="display-total"></p>
+            </div>  
+        </div>
+
     </body>
     <script>
         //Constants for each of the elements
@@ -17,6 +41,7 @@
         const peopleInput = document.querySelector('#input-people')
         const displayTip = document.querySelector('#display-tip')
         const displayTotal = document.querySelector('#display-total')
+
 
         billInput.addEventListener('change', handleBill)
         tipInput.addEventListener('change', handleBill)
@@ -27,8 +52,11 @@
             const percent = parseInt(tipInput.value)
             const people = parseInt(peopleInput.value)
 
-            const tip = bill * percent / 100.0
+            const tip = bill * (percent / 100.0)
             const total = bill + (tip * people)
+
+            displayTip.innerHTML = tip
+            displayTotal.innerHTML = total
 
         }
     </script>
