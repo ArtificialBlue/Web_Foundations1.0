@@ -1,0 +1,29 @@
+article{
+    display: flex;
+}
+.firstColumn {
+    display: flex;
+    flex-direction: column;
+
+}
+.secondColumn{
+    display: flex;
+    flex-direction: column;
+
+}
+#data-input{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    padding: 20px;
+}
+#headline-display{
+    border: 5px solid black;
+    padding: 50px;
+    margin: 20px;
+    text-align: center;
+}
+#data-output{
+    margin: 20px;
+
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alexander Lopez- Final - Web 1.0</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <article>
+        <div class="firstColumn">
+            <div id="student-info">
+                <h1>Alexander Lopez</h1>
+                <p>My favorite color is Blue and I wear Nike</p>
+                
+            </div>
+            <div id="data-input">
+                <h1>Font Styler</h1>
+
+                <label for="input-size">Font Size</label>
+                <input id="input-size" type="number">
+
+                <label for="select-font">Font Family</label>
+                <select id="select-font">
+                    <option value="Helvetic">Helvetic</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Georgia">Georgia</option>
+                </select>
+
+                <label for="input-color">Font Color</label>
+                <input id="input-color" type="color" value="#000">
+
+                <label for="input-bg-color">Background Color</label>
+                <input id="input-bg-color" type="color" value="#fff">
+
+                <label for="enter-text">Enter Text</label>
+                <textarea id="enter-text"> 
+                    
+                </textarea>
+
+            </div>
+        </div>
+        <div class="secondColumn">
+            <div id="headline-display">
+                <h1 id="display">Sample Text</h1>
+            </div>
+            <div id="data-output">
+            <h1>Font Settings</h1>
+            <pre><code>.headline {
+                font-size: <span id="show-size">16</span>px;
+                font-family: <span id="show-font">Times</span>;
+                color: <span id="show-color">#000</span>;
+                background-color: <span id="show-bg-color">#fff</span>;
+            }</code></pre>
+            </div>
+        </div>
+    </article>
+
+    </body>
+    <script src='scripts.js'></script>
+</html>
